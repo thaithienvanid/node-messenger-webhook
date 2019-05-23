@@ -1,0 +1,80 @@
+{
+  "name": "node-messenger-webhook",
+  "version": "1.0.0",
+  "author": "wow",
+  "license": "ISC",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "better-npm-run start",
+    "debug": "better-npm-run debug"
+  },
+  "betterScripts": {
+    "start": {
+      "command": "node --require @babel/register server.js",
+      "env": {
+        "NODE_ENV": "production",
+        "DEBUG": "app*",
+        "PORT": "8080"
+      }
+    },
+    "debug": {
+      "command": "nodemon --require @babel/register --inspect server.js",
+      "env": {
+        "NODE_ENV": "development",
+        "DEBUG": "app*",
+        "PORT": "8080"
+      }
+    }
+  },
+  "dependencies": {
+    "better-npm-run": "^0.1.1",
+    "body-parser": "^1.19.0",
+    "core-js": "^3.1.2",
+    "cors": "^2.8.5",
+    "debug": "^4.1.1",
+    "express": "^4.17.0",
+    "fb": "^2.0.0",
+    "helmet": "^3.18.0",
+    "ioredis": "^4.9.5",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.5.10",
+    "passport": "^0.4.0",
+    "passport-facebook": "^3.0.0",
+    "passport-jwt": "^4.0.0",
+    "regenerator-runtime": "^0.13.2",
+    "socket.io": "^2.2.0",
+    "socket.io-emitter": "^3.1.1",
+    "socket.io-redis": "^5.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-proposal-decorators": "^7.4.4",
+    "@babel/plugin-proposal-do-expressions": "^7.2.0",
+    "@babel/plugin-proposal-export-default-from": "^7.2.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.2.0",
+    "@babel/plugin-proposal-function-bind": "^7.2.0",
+    "@babel/plugin-proposal-function-sent": "^7.2.0",
+    "@babel/plugin-proposal-json-strings": "^7.2.0",
+    "@babel/plugin-proposal-logical-assignment-operators": "^7.2.0",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.4.4",
+    "@babel/plugin-proposal-numeric-separator": "^7.2.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.2.0",
+    "@babel/plugin-proposal-pipeline-operator": "^7.3.2",
+    "@babel/plugin-proposal-throw-expressions": "^7.2.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-syntax-import-meta": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/register": "^7.4.4",
+    "@babel/runtime-corejs3": "^7.4.5",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "nodemon": "^1.19.0",
+    "prettier": "^1.17.1"
+  }
+}
